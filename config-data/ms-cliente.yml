@@ -1,6 +1,6 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
-  #port: 8083
+
 spring:
   application:
     name: ms-cliente
@@ -23,13 +23,12 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
+
 eureka:
   client:
     serviceUrl:
-      #defaultZone: http://localhost:8090/eureka
-      defaultZone: ${EUREKA_URI:http://localhost:7070/eureka}
+      defaultZone: http://Cherman:202211951@localhost:7070/eureka
   instance:
-    #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 resilience4j.circuitbreaker:
